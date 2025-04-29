@@ -11,6 +11,7 @@
       background: #f0f4f8;
       text-align: center;
     }
+
     nav {
       position: fixed;
       top: 0;
@@ -21,23 +22,28 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       z-index: 1000;
     }
+
     nav h1 {
       margin: 0;
       font-size: 22px;
       font-weight: bold;
     }
+
     main {
       padding: 20px;
     }
+
     h2 {
       font-size: 32px;
       margin-bottom: 30px;
       color: #333;
     }
+
     #counter {
       color: #27ae60;
       font-weight: bold;
     }
+
     button {
       padding: 10px 20px;
       margin: 10px;
@@ -48,24 +54,50 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
-    #inc { background-color: #27ae60; }
-    #inc:hover { background-color: #219150; }
-    #dec { background-color: #e74c3c; }
-    #dec:hover { background-color: #c0392b; }
-    #reset { background-color: #262326; }
-    #reset:hover { background-color: black; }
+
+    #inc {
+      background-color: #27ae60;
+    }
+
+    #inc:hover {
+      background-color: #219150;
+    }
+
+    #dec {
+      background-color: #e74c3c;
+    }
+
+    #dec:hover {
+      background-color: #c0392b;
+    }
+
+    #reset {
+      background-color: #262326;
+    }
+
+    #reset:hover {
+      background-color: black;
+    }
   </style>
 </head>
 <body>
+
   <nav>
     <h1>Project: Counter App with Closure, Asynchronous JavaScript & setTimeout</h1>
   </nav>
+
   <main>
     <h2>Counter: <span id="counter">0</span></h2>
     <button id="inc">Increase</button>
     <button id="dec">Decrease</button>
     <button id="reset">Reset</button>
   </main>
-  <script src="script.js"></script>
+
+  <script>
+    const script = document.createElement('script');
+    script.src = 'script.js?v=' + new Date().getTime();
+    document.body.appendChild(script);
+  </script>
+
 </body>
 </html>

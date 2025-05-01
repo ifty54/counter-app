@@ -41,7 +41,7 @@
     .brand-toggle {
       position: relative;
       width: 140px;
-      height: 30px;
+      height: 38px; /* Match image height */
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -63,13 +63,14 @@
       color: black;
       font-weight: bold;
       font-size: 18px;
-      margin-top: 5px;
+      margin-top: 3px;
     }
 
     #brandImg {
       display: none;
-      height: 38px;
+      height: 100%; 
       object-fit: contain;
+      margin-top: 0; 
     }
 
     .navbar-center {
